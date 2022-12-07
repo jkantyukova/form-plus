@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;800&display=swap');
+
+/* General Styles*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #5f5d5d;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  margin: 2em 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #4520ab;
+  font-size: 2em;
+  font-weight: 800;
+}
+h1:after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #4520ab;
+  width: 150px;
+  margin: 10px auto 0;
+  transition: 1s;
+}
+h1:hover:after {
+  width: 250px;
+  transition: ease-out 1s;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 1em;
+  -webkit-box-shadow: 0px 0px 22px 12px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 0px 22px 12px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 22px 12px rgba(0, 0, 0, 0.17);
+}
+h3.dataTitle {
+  color: #eba611;
+  margin-bottom: 1em;
+}
+input {
+  display: block;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #eba611;
+  width: 100%;
+  margin-top: 10px;
+  color: #5f5d5d;
+  padding: 5px 10px;
+}
+input:not(:last-child) {
+  margin-bottom: 10px;
+}
+.btn {
+  height: 40px;
+  background: none;
+  border: none;
+  outline: 1px solid #eba610;
+  border-radius: 5px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.7em 0;
+  font-size: 1em;
+}
+.send {
+  background: #eba610;
+  transition: 1s;
+}
+.send:hover {
+  background: #eba61047;
+}
+.clear {
+  outline: 1px solid #eba610;
+  transition: 1s;
+}
+.clear:hover {
+  background: #eba61047;
+}
+
+/* User Styles */
+.mainUsers {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 1em;
+  -webkit-box-shadow: 0px 0px 22px 12px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 0px 22px 12px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 22px 12px rgba(0, 0, 0, 0.17);
+}
+h3.usersTitle {
+  color: #358bf0;
+  margin-bottom: 2.2em;
+}
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user {
+  background-color: #fff;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.user-outer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid #358bf0;
+  border-radius: 5px;
+  padding: 15px;
+}
+.user-info {
+  width: 70%;
+}
+.user-info p {
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  margin: 10px 0;
+  padding: 5px 10px;
+  color: #5f5d5d;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25%;
+}
+.delete,
+.change {
+  height: 40%;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+.delete {
+  border: 1px solid #348bf0;
+  background-color: #fff;
+  transition: 1s;
+}
+.change {
+  background: #348bf0;
+  border: 1px solid #348bf0;
+  transition: 1s;
+}
+.delete:hover {
+  background-color: #348bf080;
+}
+.change:hover {
+  background: #348bf080;
+}
+.blue {
+  width: 200px;
+  height: 200px;
+  background: #348bf0;
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  z-index: -1;
+  pointer-events: none;
+}
+.yellow {
+  width: 200px;
+  height: 200px;
+  background: #eba611;
+  position: absolute;
+  bottom: 35px;
+  left: 25px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Tablet Styles*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .user-info {
+    width: 100%;
+  }
+  .menu {
+    width: 100%;
+  }
+  .delete,
+  .change {
+    height: 100%;
+    margin: 10px 0;
+    padding: 8px 0;
+  }
+}
+
+/* Mobile Styles*/
+@media (max-width: 767px) {
+  .yellow,
+  .blue {
+    display: none;
+  }
+  .form,
+  .mainUsers {
+    width: 100%;
+  }
+  .user-info {
+    width: 100%;
+  }
+  .menu {
+    width: 100%;
+  }
+  .delete,
+  .change {
+    height: 100%;
+    margin: 10px 0;
+    padding: 8px 0;
+  }
+}
